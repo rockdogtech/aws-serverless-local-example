@@ -1,5 +1,25 @@
-# sam-app
+# aws-serverless-local-example
 
+## Pre-requisites
+
+* brew
+* docker
+
+## Install
+
+* aws-sam-cli
+
+```bash
+make install
+```
+
+## Run
+
+```bash
+make invoke
+```
+
+## Overview
 This is a sample template for sam-app - Below is a brief explanation of what we have generated for you:
 
 ```bash
