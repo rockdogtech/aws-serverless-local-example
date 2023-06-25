@@ -4,6 +4,7 @@
 
 * brew
 * docker
+* direnv
 
 ## Install
 
@@ -19,13 +20,18 @@ make install
 make invoke
 ```
 
+## Dependencies
+
+* https://github.com/google/go-github
+* https://github.com/beatlabs/github-auth
+
 ## Overview
 This is a sample template for sam-app - Below is a brief explanation of what we have generated for you:
 
 ```bash
 .
 ├── README.md                   <-- This instructions file
-├── hello-world                 <-- Source code for a lambda function
+├── example                 <-- Source code for a lambda function
 │   ├── main.go                 <-- Lambda function code
 │   └── main_test.go            <-- Unit tests
 │   └── Dockerfile              <-- Dockerfile
@@ -104,7 +110,7 @@ You can find your API Gateway Endpoint URL in the output values displayed after 
 We use `testing` package that is built-in in Golang and you can simply run the following command to run our tests locally:
 
 ```shell
-go test -v ./hello-world/
+go test -v ./example/
 ```
 # Appendix
 
