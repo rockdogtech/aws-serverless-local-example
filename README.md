@@ -5,6 +5,7 @@
 * brew
 * docker
 * direnv
+* jq
 
 ## Install
 

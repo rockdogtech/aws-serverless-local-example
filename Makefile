@@ -38,10 +38,10 @@ init:
 	@sam init
 
 build:
-	@sam build
+	@sam build --no-cached
 
 invoke: build
-	@sam local invoke
+	@sam local invoke --env-vars <(echo "{ \"Parameters\": `jq -n env` }")
 
 # fmt:
 # 	@gofmt -l -w $(SRC)

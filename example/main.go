@@ -40,10 +40,8 @@ type GithubProxyResponse struct {
 }
 
 func handler(request events.APIGatewayProxyRequest) (GithubProxyResponse, error) {
-	//resp, err := http.Get(DefaultHTTPGetAddress)
-	//if err != nil {
-	//	return events.APIGatewayProxyResponse{}, err
-	//}
+	ctx := context.Background()
+
 	apiKey := os.Getenv("GITHUB_AUTH_PEM")
 	if apiKey == "" {
 		return GithubProxyResponse{}, ErrNoGithubPemConfigured
@@ -64,7 +62,6 @@ func handler(request events.APIGatewayProxyRequest) (GithubProxyResponse, error)
 		return GithubProxyResponse{}, ErrUnableToParsePem
 	}
 	githubAppInstallation, err := inst.NewConfig(appIDEnvValue, installIDEnvValue, pemBytes)
-	ctx := context.Background()
 
 	client := github.NewClient(githubAppInstallation.Client(ctx))
 	opt := &github.RepositoryListByOrgOptions{Type: "public"}
