@@ -7,4 +7,8 @@
 
 ## Install
 
-* 
+* aws-sam-cli
+
+```bash
+make install
+```
