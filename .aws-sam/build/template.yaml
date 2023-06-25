@@ -27,7 +27,7 @@ Resources:
           PARAM1: VALUE
       ImageUri: helloworldfunction:go1.x-v1
     Metadata:
-      DockerContext: /Users/jcosta/projects/com/johncosta/aws-serverless-local-example/sam-app/hello-world
+      DockerContext: /Users/jcosta/projects/com/johncosta/aws-serverless-local-example/hello-world
       DockerTag: go1.x-v1
       Dockerfile: Dockerfile
       SamResourceId: HelloWorldFunction

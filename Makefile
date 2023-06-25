@@ -21,8 +21,8 @@ all: check install
 # $(TARGET): $(SRC)
 # 	@go build $(LDFLAGS) -o $(TARGET)
 
-build: $(TARGET)
-	@true
+# build: $(TARGET)
+# 	@true
 
 clean:
 	@rm -f $(TARGET)
@@ -36,6 +36,12 @@ uninstall: clean
 
 init:
 	@sam init
+
+build:
+	@sam build
+
+invoke: build
+	@sam local invoke
 
 # fmt:
 # 	@gofmt -l -w $(SRC)
